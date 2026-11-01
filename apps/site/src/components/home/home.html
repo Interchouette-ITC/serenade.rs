@@ -1,0 +1,188 @@
+<div class="home-page">
+  <section class="hero wrap">
+    <div class="hero__copy">
+      <p class="eyebrow">
+        <span class="eyebrow__dot"></span>COMPOSE YOUR RUST APP
+      </p>
+      <h1>Meet{{ space }}<span>Serenade.</span></h1>
+      <p class="hero__lead">
+        A little more{{ space }}<em>miaou</em>{{ space }}in your architecture. A
+        black cat from the rooftops of Paris, bringing a touch of elegance,
+        independence, and good taste to your Rust applications.
+      </p>
+      <p class="hero__lead hero__lead--second">
+        Build from clear, reusable components, and let Serenade roam wherever it
+        pleases.
+      </p>
+      <div class="hero__actions">
+        <a class="button button--primary" href="/getting-started/"
+          >Come on in{{ space }}<span>→</span></a
+        >
+        <a
+          class="button button--quiet"
+          href="https://github.com/Interchouette-ITC/Serenade"
+        >
+          Explore the source
+        </a>
+        <a class="button button--quiet" href="/docs/">Read the docs</a>
+        <span class="button button--quiet button--disabled" aria-disabled="true"
+          >crates.io</span
+        >
+      </div>
+      <div class="hero__notes" aria-label="Serenade highlights">
+        <span>Rust-native</span>
+        <span>Composable by design</span>
+        <span>Yours to shape</span>
+      </div>
+    </div>
+    <div class="hero__art">
+      <div class="hero__art-orbit" aria-hidden="true"></div>
+      <img
+        class="hero__cat"
+        src="/serenade-cat-seal.png"
+        alt="Serenade's black cat beneath a golden Paris moon"
+      />
+      <span class="hero__sticker">🐾 Naughty by nature.</span>
+      <span class="hero__spark hero__spark--one" aria-hidden="true">✦</span>
+      <span class="hero__spark hero__spark--two" aria-hidden="true">✧</span>
+    </div>
+    <div
+      class="hero__terminal"
+      aria-label="A Serenade application, composed from four parts"
+    >
+      <div class="terminal-bar">
+        <i></i><i></i><i></i><span>a serenade, in four parts</span>
+      </div>
+      <pre><code>{{ architectureTree }}</code></pre>
+    </div>
+  </section>
+
+  <section class="principles wrap" aria-label="Serenade principles">
+    <article class="principle">
+      <span class="principle__number">01</span>
+      <h2>Explicit composition</h2>
+      <p>
+        Bundles register services, routes, configuration, and subscribers. Your
+        application decides what belongs in its kernel.
+      </p>
+    </article>
+    <article class="principle">
+      <span class="principle__number">02</span>
+      <h2>Rust-native tooling</h2>
+      <p>
+        Cargo owns dependencies. Serenade adds application composition and
+        developer conventions, not a second package manager.
+      </p>
+    </article>
+    <article class="principle">
+      <span class="principle__number">03</span>
+      <h2>Choose your adapters</h2>
+      <p>
+        Use the persistence, HTTP server, and infrastructure that fit your
+        application. Serenade does not mandate an ORM.
+      </p>
+    </article>
+  </section>
+
+  <section class="showcase">
+    <div class="wrap showcase__inner">
+      <div>
+        <p class="eyebrow">A FRAMEWORK, NOT A PRODUCT</p>
+        <h2>A familiar structure.<br />Room for Rust.</h2>
+      </div>
+      <div class="showcase__copy">
+        <p>
+          Serenade gives your Rust application a steady rhythm: bring related
+          services, routes, and configuration together, then use each component
+          on its own whenever that fits better.
+        </p>
+        <a class="text-link" href="/architecture/"
+          >Explore the architecture{{ space }}<span>→</span></a
+        >
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap feature-section">
+    <div class="section-heading">
+      <p class="eyebrow">THE BUILDING BLOCKS</p>
+      <h2>The pieces you need.<br />None you don’t.</h2>
+      <img
+        class="section-heading__art"
+        src="/serenade-cat-lantern.png"
+        alt="A black cat perched beside a glowing Paris street lamp"
+      />
+    </div>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-card__number">01</span>
+        <h3>Kernel & bundles</h3>
+        <p>
+          Compose services, routes, configuration, and event subscribers into an
+          application.
+        </p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-card__number">02</span>
+        <h3>Dependency injection</h3>
+        <p>
+          Define and resolve application services through an explicit container.
+        </p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-card__number">03</span>
+        <h3>HTTP foundations</h3>
+        <p>
+          Work with requests, responses,<br />routing, middleware, and server
+          adapters.
+        </p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-card__number">04</span>
+        <h3>Security & forms</h3>
+        <p>
+          Build on security components, CSRF-aware forms, validation, and
+          escaping helpers.
+        </p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-card__number">05</span>
+        <h3>Console & recipes</h3>
+        <p>
+          Use application commands and reusable setup recipes with Cargo at the
+          center.
+        </p>
+      </article>
+      <article class="feature-card">
+        <span class="feature-card__number">06</span>
+        <h3>Adapters & contracts</h3>
+        <p>Keep persistence and infrastructure choices in your application.</p>
+      </article>
+    </div>
+    <p class="feature-note">
+      Serenade is in active pre-1.0 development. Feature availability varies by
+      crate; consult the documentation before adopting a component.
+    </p>
+  </section>
+
+  <section class="closing">
+    <div class="wrap closing__inner">
+      <div>
+        <p class="eyebrow">START WITH THE FOUNDATIONS</p>
+        <h2>Build something<br />that stays yours.</h2>
+      </div>
+      <div class="closing__action">
+        <p>
+          Explore the source, read the current docs, and see how the examples
+          compose Serenade components.
+        </p>
+        <a class="button button--primary" href="/getting-started/"
+          >Start exploring{{ space }}<span>→</span></a
+        >
+        <span class="button button--quiet button--disabled" aria-disabled="true"
+          >crates.io</span
+        >
+      </div>
+    </div>
+  </section>
+</div>

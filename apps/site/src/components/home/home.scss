@@ -1,0 +1,39 @@
+.home-page {
+  .hero {
+    .hero__art {
+      .hero__cat {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .hero__spark {
+        pointer-events: none;
+      }
+    }
+
+    .hero__terminal {
+      overflow-x: auto;
+
+      pre {
+        white-space: pre;
+      }
+    }
+  }
+
+  .feature-section {
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .feature-section {
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

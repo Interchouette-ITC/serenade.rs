@@ -1,0 +1,36 @@
+[package]
+name = "serenade-site"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+build = "build.rs"
+
+[features]
+default = ["hydrate"]
+hydrate = ["leptos/hydrate", "dep:web-sys"]
+ssr = ["leptos/ssr", "dep:hydration_context", "dep:serenade-minify"]
+
+[[bin]]
+name = "serenade-site"
+path = "src/main.rs"
+required-features = ["hydrate"]
+
+[[bin]]
+name = "prerender"
+path = "src/bin/prerender.rs"
+required-features = ["ssr"]
+
+[dependencies]
+leptos = { workspace = true }
+rangular-aot = { workspace = true }
+rangular-expr = { workspace = true }
+rangular-host = { workspace = true }
+web-sys = { version = "0.3", optional = true, features = ["Window", "Location"] }
+hydration_context = { version = "0.3.2", optional = true, default-features = false }
+serenade-minify = { path = "../../../serenade/crates/serenade-minify", optional = true }
+anyhow = "1"
+
+[build-dependencies]
+rangular-aot = { workspace = true }
+rangular-css = { git = "https://github.com/Interchouette-ITC/rangular", rev = "3985abc8bfdb414c7882b9ca3966f94fd8ca3e16" }

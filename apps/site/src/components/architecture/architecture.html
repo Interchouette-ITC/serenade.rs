@@ -1,0 +1,132 @@
+<article class="doc-page doc-page--architecture wrap">
+  <p class="eyebrow">SERENADE · THE ARCHITECTURE</p>
+  <header class="architecture-hero">
+    <p class="architecture-kicker">Symfony-inspired architecture. Rust-native implementation.</p>
+    <h1>What if Symfony’s ideas were built for Rust?</h1>
+    <p class="doc-page__lead">
+      Symfony showed how a framework can be a set of independent components, brought together by
+      an application kernel and extended through bundles. Serenade takes inspiration from that
+      architecture and gives it a Rust shape: explicit composition, Cargo-managed crates, and room
+      to choose the infrastructure your application needs.
+    </p>
+    <p class="architecture-disclaimer">
+      Serenade is an independent Rust project—not a PHP port, a Symfony compatibility layer, or an
+      affiliated Symfony product.
+    </p>
+    <div class="doc-actions">
+      <a class="button button--primary" href="https://github.com/Interchouette-ITC/Serenade/tree/dev/examples/demo-app">See the architecture in the demo</a>
+      <a class="button button--quiet" href="/components/">Browse the components</a>
+    </div>
+  </header>
+
+  <section class="architecture-section">
+    <p class="eyebrow">THE COMPOSITION MODEL</p>
+    <h2>Four parts. One application.</h2>
+    <p class="architecture-intro">
+      Each part has a job. Your application brings them together; it stays in charge of the result.
+    </p>
+    <div class="architecture-flow">
+      <div class="architecture-part">
+        <span class="architecture-part__number">01</span>
+        <small>LIFECYCLE</small>
+        <strong>Kernel</strong>
+        <p>Creates the application lifecycle: register bundles, compile, boot, and shut down.</p>
+      </div>
+      <span class="architecture-flow__join" aria-hidden="true">↓</span>
+      <div class="architecture-part">
+        <span class="architecture-part__number">02</span>
+        <small>APPLICATION COMPOSITION</small>
+        <strong>Bundles</strong>
+        <p>Group services, configuration, routes, subscribers, and commands into reusable units.</p>
+      </div>
+      <span class="architecture-flow__join" aria-hidden="true">↓</span>
+      <div class="architecture-part">
+        <span class="architecture-part__number">03</span>
+        <small>CAPABILITIES</small>
+        <strong>Components</strong>
+        <p>Offer focused building blocks—such as DI, events, HTTP, console, security, and forms—that can also be used independently.</p>
+      </div>
+      <span class="architecture-flow__join" aria-hidden="true">↓</span>
+      <div class="architecture-part">
+        <span class="architecture-part__number">04</span>
+        <small>INFRASTRUCTURE BOUNDARIES</small>
+        <strong>Adapters</strong>
+        <p>Connect framework contracts to choices such as Actix Web, Axum, and external services.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="architecture-section architecture-section--contrast">
+    <p class="eyebrow">INSPIRED BY SYMFONY · MADE FOR RUST</p>
+    <h2>Keep the useful ideas.<br /><span>Let Rust be Rust.</span></h2>
+    <div class="architecture-contrast">
+      <article class="architecture-card">
+        <span class="architecture-card__label">THE ARCHITECTURAL INSPIRATION</span>
+        <h3>Small pieces, composed deliberately.</h3>
+        <p>
+          A kernel coordinates the application. Bundles contribute capabilities. Components have
+          clear boundaries and can stand on their own. This is the Symfony-shaped influence—not a
+          promise to reproduce every Symfony feature or API.
+        </p>
+      </article>
+      <article class="architecture-card">
+        <span class="architecture-card__label">THE RUST-NATIVE CHOICES</span>
+        <h3>Explicit dependencies, familiar tools.</h3>
+        <p>
+          Cargo remains the package manager. Rust traits and types define the contracts. Choose an
+          HTTP adapter and persistence layer for your application; Serenade does not mandate an
+          ORM or a single server.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="architecture-section">
+    <p class="eyebrow">A FRAMEWORK, NOT A PREBUILT PRODUCT</p>
+    <h2>Start with the foundation.<br /><span>Assemble what you need.</span></h2>
+    <p class="architecture-intro">
+      Serenade provides reusable infrastructure; your product owns its domain and its choices.
+      Add framework components through bundles, or use a component directly when the kernel is
+      more than you need.
+    </p>
+    <div class="architecture-principles">
+      <article>
+        <span>01</span>
+        <h3>Cargo owns dependencies</h3>
+        <p>No second package manager. Add the crates your application uses with the tooling Rust already provides.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h3>Bundles compose capabilities</h3>
+        <p>Register related services, configuration, routes, and event subscribers as application units.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h3>Infrastructure stays a choice</h3>
+        <p>Use an adapter where it helps. Keep server, storage, and transport decisions at your application boundary.</p>
+      </article>
+    </div>
+    <aside class="architecture-status">
+      <strong>Pre-1.0, with components at different stages.</strong>
+      <p>
+        Serenade is actively evolving. The architecture is a direction, not a claim that every
+        component is equally complete or production-ready. Check each crate’s documentation,
+        examples, and tests before adopting it.
+      </p>
+      <a class="text-link" href="/components/">Review the component catalog<span>→</span></a>
+    </aside>
+  </section>
+
+  <section class="architecture-ending">
+    <div>
+      <p class="eyebrow">READY TO EXPLORE?</p>
+      <h2>See how the pieces<br />work together.</h2>
+    </div>
+    <div class="architecture-ending__actions">
+      <p>Start with the demo bundle, then follow the quickstart into the web examples.</p>
+      <a class="button button--primary" href="https://github.com/Interchouette-ITC/Serenade/tree/dev/examples/demo-app">Explore the demo bundle</a>
+      <a class="button button--quiet" href="/getting-started/">Get started with Serenade</a>
+      <a class="text-link" href="https://github.com/Interchouette-ITC/Serenade/blob/dev/docs-dev/VISION.md">Read the framework vision<span>→</span></a>
+    </div>
+  </section>
+</article>

@@ -1,0 +1,29 @@
+.site-header {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+
+    a {
+      color: #a9adbb;
+      font-size: 0.875rem;
+      text-decoration: none;
+      transition: color 160ms ease;
+
+      &:hover,
+      &:focus-visible {
+        color: #f3f1ff;
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    .site-nav {
+      gap: 0.85rem;
+
+      a {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

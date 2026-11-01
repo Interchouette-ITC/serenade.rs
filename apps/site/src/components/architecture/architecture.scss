@@ -1,0 +1,279 @@
+.doc-page--architecture {
+  max-width: 1040px;
+
+  .architecture-hero {
+    max-width: 850px;
+    padding-block: 0.4rem 1rem;
+  }
+
+  .architecture-kicker {
+    margin: 0 0 1rem;
+    color: #f2bf46;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .architecture-hero h1 {
+    max-width: 820px;
+    font-size: clamp(3rem, 7vw, 5.7rem);
+    line-height: 0.99;
+  }
+
+  .architecture-hero .doc-page__lead {
+    max-width: 790px;
+    margin-bottom: 1.1rem;
+    font-size: 1.16rem;
+  }
+
+  .architecture-disclaimer {
+    max-width: 700px;
+    margin: 0;
+    color: #a99f8d;
+    font-size: 0.82rem;
+    line-height: 1.7;
+  }
+
+  .architecture-section {
+    margin-top: 5rem;
+
+    > .eyebrow {
+      margin-bottom: 0.8rem;
+    }
+
+    > h2 {
+      margin-top: 0;
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      line-height: 1.08;
+
+      span {
+        color: #f2bf46;
+      }
+    }
+  }
+
+  .architecture-intro {
+    max-width: 720px;
+    margin: 1rem 0 0;
+    color: #c4bdad;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .architecture-flow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 0.8rem;
+    margin-block: 2rem 0;
+
+    .architecture-part {
+      min-width: 0;
+      padding: 1.2rem;
+      border: 1px solid rgb(242 191 70 / 21%);
+      border-radius: 17px 17px 27px 17px;
+      background: linear-gradient(145deg, #1b1812, #15130f);
+
+      &__number {
+        float: right;
+        color: rgb(242 191 70 / 48%);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.35rem;
+      }
+
+      small {
+        display: block;
+        min-height: 2.2em;
+        margin-bottom: 0.65rem;
+        color: #f2bf46;
+        font-size: 0.61rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+
+      strong {
+        color: #f4eddd;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.35rem;
+        font-weight: 500;
+      }
+
+      p {
+        margin: 0.65rem 0 0;
+        color: #bdb4a1;
+        font-size: 0.79rem;
+        line-height: 1.7;
+      }
+    }
+
+    .architecture-flow__join {
+      display: none;
+    }
+  }
+
+  .architecture-section--contrast {
+    margin-inline: -1.5rem;
+    padding: 3rem 1.5rem;
+    border-block: 1px solid rgb(242 191 70 / 16%);
+    background:
+      radial-gradient(ellipse at 86% 45%, rgb(242 191 70 / 9%), transparent 32rem),
+      linear-gradient(110deg, #1b1710, #15120d 55%, #1d180e);
+  }
+
+  .architecture-contrast {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.8rem;
+  }
+
+  .architecture-card {
+    padding: 1.5rem;
+    border: 1px solid rgb(242 191 70 / 19%);
+    border-radius: 20px 20px 34px 20px;
+    background: rgb(14 12 9 / 48%);
+
+    &__label {
+      color: #f2bf46;
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+    }
+
+    h3 {
+      margin: 1rem 0 0.6rem;
+      color: #f4eddd;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: #bdb4a1;
+      font-size: 0.86rem;
+      line-height: 1.8;
+    }
+  }
+
+  .architecture-principles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+    margin-top: 1.8rem;
+
+    article {
+      padding: 1.25rem;
+      border-top: 1px solid rgb(242 191 70 / 42%);
+      background: linear-gradient(180deg, rgb(242 191 70 / 5%), transparent);
+    }
+
+    span {
+      color: #f2bf46;
+      font: 0.72rem ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    h3 {
+      margin: 0.85rem 0 0.5rem;
+      color: #f4eddd;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin: 0;
+      color: #bdb4a1;
+      font-size: 0.81rem;
+      line-height: 1.7;
+    }
+  }
+
+  .architecture-status {
+    margin-top: 2rem;
+    padding: 1.4rem 1.5rem;
+    border: 1px solid rgb(242 191 70 / 21%);
+    border-left: 3px solid #f2bf46;
+    border-radius: 0 16px 16px 0;
+    background: rgb(242 191 70 / 5%);
+
+    strong {
+      color: #f4eddd;
+      font-size: 0.9rem;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0.55rem 0 0.8rem;
+      color: #c4bdad;
+      font-size: 0.84rem;
+      line-height: 1.75;
+    }
+  }
+
+  .architecture-ending {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 3rem;
+    margin: 5rem -1.5rem 0;
+    padding: 3rem 1.5rem;
+    border-block: 1px solid rgb(242 191 70 / 16%);
+    background:
+      radial-gradient(ellipse at 85% 50%, rgb(242 191 70 / 10%), transparent 30rem),
+      #17140f;
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 1.08;
+    }
+  }
+
+  .architecture-ending__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+
+    p {
+      flex-basis: 100%;
+      margin: 0 0 0.5rem;
+      color: #bdb4a1;
+      font-size: 0.88rem;
+      line-height: 1.75;
+    }
+
+    .text-link {
+      flex-basis: 100%;
+      margin-top: 0.45rem;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .architecture-flow {
+      grid-template-columns: 1fr;
+    }
+
+    .architecture-contrast,
+    .architecture-principles,
+    .architecture-ending {
+      grid-template-columns: 1fr;
+    }
+
+    .architecture-section--contrast,
+    .architecture-ending {
+      margin-inline: -0.7rem;
+      padding-inline: 0.7rem;
+    }
+
+    .architecture-ending {
+      gap: 1.5rem;
+    }
+  }
+}

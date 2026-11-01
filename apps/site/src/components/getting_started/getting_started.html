@@ -1,0 +1,69 @@
+<article class="doc-page doc-page--getting-started wrap">
+  <p class="eyebrow">DOCUMENTATION · FIRST STEPS</p>
+  <h1>Get to know{{ space }}<span>Serenade.</span></h1>
+  <p class="doc-page__lead">
+    Serenade is pre-1.0. Start with the core bundle demo, then explore four runnable front-end modes:
+    server-rendered HTML, a client-rendered SPA, static-site generation, and a Universal app with a
+    live backend.
+  </p>
+  <h2>1. Install the prerequisites</h2>
+  <p>Install Rust 1.99.0 or newer, GNU Make, Trunk, and the WebAssembly target. The first Cargo build downloads dependencies.</p>
+  <pre class="code-block"><code>{{ setupCommands }}</code></pre>
+  <h2>2. Run the tests and core demo</h2>
+  <p>Run the workspace tests, then start the small bundle sample. The demo prints registered bundles, a greeting, event subscribers, and routes, then exits.</p>
+  <pre class="code-block"><code>{{ coreCommands }}</code></pre>
+  <p>To try the interactive console instead, run{{ space }}<code>make console ARGS='serenade:about'</code>, or add{{ space }}<code>ARGS=--interactive</code>{{ space }}to open the interactive picker.</p>
+  <h2>3. Choose a web mode</h2>
+  <p>Run these commands from the Serenade repository root. HTML and Universal run a local server; SPA and SSG create static build output.</p>
+  <div class="quickstart-modes">
+    <article class="quickstart-mode">
+      <span class="quickstart-mode__label">SERVER · HTML</span>
+      <h3>A server-rendered app</h3>
+      <p>Run MyFeed, the fuller HTML example, on your machine.</p>
+      <pre class="code-block"><code>make html</code></pre>
+      <p>Open http://127.0.0.1:8080/. The process stays running until you stop it.</p>
+    </article>
+    <article class="quickstart-mode">
+      <span class="quickstart-mode__label">BUILD · SPA</span>
+      <h3>A client-rendered app</h3>
+      <p>Build the Leptos SPA and its interactive counter with Trunk.</p>
+      <pre class="code-block"><code>{{ spaCommands }}</code></pre>
+      <p>Open http://127.0.0.1:4173/. The build output is examples/demo-monorepo/apps/demo-spa/dist/.</p>
+    </article>
+    <article class="quickstart-mode">
+      <span class="quickstart-mode__label">BUILD · SSG</span>
+      <h3>Prerendered pages, hydrated</h3>
+      <p>Build static HTML for the home and about routes, plus the browser hydration bundle.</p>
+      <pre class="code-block"><code>{{ ssgCommands }}</code></pre>
+      <p>Open http://127.0.0.1:4173/ or http://127.0.0.1:4173/about/. Generated files are in examples/demo-monorepo/apps/demo-ssg/dist/.</p>
+    </article>
+    <article class="quickstart-mode">
+      <span class="quickstart-mode__label">SERVER · UNIVERSAL</span>
+      <h3>A frontend with a live backend</h3>
+      <p>Build the frontend, then run the backend that serves assets, JSON, and a server-rendered page.</p>
+      <pre class="code-block"><code>make universal</code></pre>
+      <p>Open http://127.0.0.1:8080/ and http://127.0.0.1:8080/cms/hello. Stop the process when finished.</p>
+    </article>
+  </div>
+  <div class="doc-callout">
+    <strong>One local server at a time</strong>
+    <p>HTML and Universal both use 127.0.0.1:8080 by default. Stop one before starting the other. The SPA and SSG examples share a port only when you serve their generated files; stop that preview server before reusing port 4173.</p>
+  </div>
+  <h2>4. Keep exploring</h2>
+  <p>Use{{ space }}<code>make html-all</code>,{{ space }}<code>make spa-all</code>,{{ space }}and{{ space }}<code>make ssg-all</code>{{ space }}to select every registered app in those modes. Each command currently has one demo app. Read the example guides for details and environment settings.</p>
+  <div class="doc-actions">
+    <a class="button button--quiet" href="https://github.com/Interchouette-ITC/Serenade/tree/dev/examples">Browse all examples</a>
+    <a class="button button--quiet" href="https://github.com/Interchouette-ITC/Serenade/blob/dev/docs-dev/FRONT-MODES.md">Read the front modes guide</a>
+    <a class="button button--quiet" href="https://github.com/Interchouette-ITC/Serenade/tree/dev/examples/demo-app">Core bundle demo</a>
+  </div>
+  <h2>5. Choose your building blocks</h2>
+  <p>Start with the components your product needs. Select an HTTP adapter and persistence strategy deliberately; Serenade does not require one server or ORM.</p>
+  <div class="doc-callout">
+    <strong>Pre-1.0 project</strong>
+    <p>Crates evolve independently and APIs can change. Check each crate's README, tests, and current API documentation before adopting it.</p>
+  </div>
+  <div class="doc-actions">
+    <a class="button button--primary" href="https://interchouette-itc.github.io/Serenade/">Rust API docs</a>
+    <a class="button button--quiet" href="https://github.com/Interchouette-ITC/Serenade">Serenade on GitHub</a>
+  </div>
+</article>

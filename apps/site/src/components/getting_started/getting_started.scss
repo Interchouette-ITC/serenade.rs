@@ -1,0 +1,51 @@
+.doc-page--getting-started {
+  .quickstart-modes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-block: 1.6rem 2rem;
+
+    .quickstart-mode {
+      min-width: 0;
+      padding: 1.2rem;
+      border: 1px solid rgb(242 191 70 / 21%);
+      border-radius: 17px 17px 27px 17px;
+      background: linear-gradient(145deg, #1b1812, #15130f);
+
+      &__label {
+        color: #f2bf46;
+        font-size: 0.64rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+      }
+
+      h3 {
+        margin: 0.5rem 0 0.7rem;
+        color: #fff7e6;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      p {
+        margin: 0.6rem 0;
+        color: #c4bdad;
+        font-size: 0.82rem;
+        line-height: 1.7;
+      }
+
+      .code-block {
+        max-width: 100%;
+        margin: 0.8rem 0;
+        overflow-x: auto;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    .quickstart-modes {
+      grid-template-columns: 1fr;
+    }
+  }
+}
