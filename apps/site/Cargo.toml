@@ -32,5 +32,4 @@ serenade-minify = { path = "../../../serenade/crates/serenade-minify", optional 
 anyhow = "1"
 
 [build-dependencies]
-rangular-aot = { workspace = true }
-rangular-css = { git = "https://github.com/Interchouette-ITC/rangular", rev = "3985abc8bfdb414c7882b9ca3966f94fd8ca3e16" }
+rangular-build = { path = "../../../rangular/crates/rangular-build" }

@@ -5,6 +5,7 @@ mod components;
 use components::{
     architecture::Architecture, components::Components as ComponentsPage,
     getting_started::GettingStarted, home::Home, site_footer::SiteFooter, site_header::SiteHeader,
+    site_layout::site_layout,
 };
 
 #[cfg(feature = "hydrate")]
@@ -20,8 +21,8 @@ pub fn App() -> impl IntoView {
 
 #[component]
 fn SitePage(page: &'static str) -> impl IntoView {
-    view! {
-        <div class="site-shell">
+    site_layout(Box::new(move || {
+        view! {
             <SiteHeader />
             <main>
                 {match page {
@@ -32,8 +33,9 @@ fn SitePage(page: &'static str) -> impl IntoView {
                 }}
             </main>
             <SiteFooter />
-        </div>
-    }
+        }
+        .into_any()
+    }))
 }
 
 #[cfg(any(feature = "hydrate", test))]

@@ -9,6 +9,6 @@ publish = false
 
 [workspace.dependencies]
 leptos = { version = "0.8", default-features = false }
-rangular-aot = { git = "https://github.com/Interchouette-ITC/rangular", rev = "3985abc8bfdb414c7882b9ca3966f94fd8ca3e16" }
-rangular-expr = { git = "https://github.com/Interchouette-ITC/rangular", rev = "3985abc8bfdb414c7882b9ca3966f94fd8ca3e16" }
-rangular-host = { git = "https://github.com/Interchouette-ITC/rangular", rev = "3985abc8bfdb414c7882b9ca3966f94fd8ca3e16" }
+rangular-aot = { git = "https://github.com/Interchouette-ITC/rangular.git", branch = "dev" }
+rangular-expr = { git = "https://github.com/Interchouette-ITC/rangular.git", branch = "dev" }
+rangular-host = { git = "https://github.com/Interchouette-ITC/rangular.git", branch = "dev" }

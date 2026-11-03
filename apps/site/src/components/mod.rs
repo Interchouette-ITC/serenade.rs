@@ -6,6 +6,7 @@ pub mod getting_started;
 pub mod home;
 pub mod site_footer;
 pub mod site_header;
+pub mod site_layout;
 
 pub(crate) struct StaticHost;
 
