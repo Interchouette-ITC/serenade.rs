@@ -1894,39 +1894,29 @@ dependencies = [
 [[package]]
 name = "rangular-aot"
 version = "1.0.3"
-dependencies = [
- "proc-macro2",
- "quote",
- "rangular-expr 1.0.3",
- "rangular-host 1.0.3",
- "rangular-parser 1.0.3",
- "send_wrapper",
-]
-
-[[package]]
-name = "rangular-aot"
-version = "1.0.3"
 source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#cdb2486452c3122d28b622a493e554ee8d9ba692"
 dependencies = [
  "proc-macro2",
  "quote",
- "rangular-expr 1.0.3 (git+https://github.com/Interchouette-ITC/rangular.git?branch=dev)",
- "rangular-host 1.0.3 (git+https://github.com/Interchouette-ITC/rangular.git?branch=dev)",
- "rangular-parser 1.0.3 (git+https://github.com/Interchouette-ITC/rangular.git?branch=dev)",
+ "rangular-expr",
+ "rangular-host",
+ "rangular-parser",
  "send_wrapper",
 ]
 
 [[package]]
 name = "rangular-build"
 version = "1.0.3"
+source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#cdb2486452c3122d28b622a493e554ee8d9ba692"
 dependencies = [
- "rangular-aot 1.0.3",
+ "rangular-aot",
  "rangular-css",
 ]
 
 [[package]]
 name = "rangular-css"
 version = "1.0.3"
+source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#cdb2486452c3122d28b622a493e554ee8d9ba692"
 dependencies = [
  "grass",
 ]
@@ -1934,23 +1924,9 @@ dependencies = [
 [[package]]
 name = "rangular-expr"
 version = "1.0.3"
-dependencies = [
- "rangular-host 1.0.3",
-]
-
-[[package]]
-name = "rangular-expr"
-version = "1.0.3"
 source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#cdb2486452c3122d28b622a493e554ee8d9ba692"
 dependencies = [
- "rangular-host 1.0.3 (git+https://github.com/Interchouette-ITC/rangular.git?branch=dev)",
-]
-
-[[package]]
-name = "rangular-host"
-version = "1.0.3"
-dependencies = [
- "regex",
+ "rangular-host",
 ]
 
 [[package]]
@@ -1964,16 +1940,9 @@ dependencies = [
 [[package]]
 name = "rangular-parser"
 version = "1.0.3"
-dependencies = [
- "rangular-expr 1.0.3",
-]
-
-[[package]]
-name = "rangular-parser"
-version = "1.0.3"
 source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#cdb2486452c3122d28b622a493e554ee8d9ba692"
 dependencies = [
- "rangular-expr 1.0.3 (git+https://github.com/Interchouette-ITC/rangular.git?branch=dev)",
+ "rangular-expr",
 ]
 
 [[package]]
@@ -2221,10 +2190,10 @@ dependencies = [
  "anyhow",
  "hydration_context",
  "leptos",
- "rangular-aot 1.0.3 (git+https://github.com/Interchouette-ITC/rangular.git?branch=dev)",
+ "rangular-aot",
  "rangular-build",
- "rangular-expr 1.0.3 (git+https://github.com/Interchouette-ITC/rangular.git?branch=dev)",
- "rangular-host 1.0.3 (git+https://github.com/Interchouette-ITC/rangular.git?branch=dev)",
+ "rangular-expr",
+ "rangular-host",
  "serenade-minify",
  "web-sys",
 ]
