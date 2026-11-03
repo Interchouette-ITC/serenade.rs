@@ -1,3 +1,16 @@
+[[hooks]]
+stage = "pre_build"
+command = "cargo"
+command_arguments = [
+  "build",
+  "--release",
+  "--locked",
+  "--target",
+  "wasm32-unknown-unknown",
+  "--features",
+  "hydrate",
+]
+
 [build]
 target = "index.html"
 dist = "dist"
