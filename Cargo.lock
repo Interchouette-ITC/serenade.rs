@@ -2164,6 +2164,7 @@ dependencies = [
 [[package]]
 name = "serenade-http"
 version = "0.1.0"
+source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#9458f4caf7cb2e1fdea729ac2a70e81f144c5c79"
 dependencies = [
  "thiserror 2.0.21",
 ]
@@ -2171,6 +2172,7 @@ dependencies = [
 [[package]]
 name = "serenade-minify"
 version = "0.1.0"
+source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#9458f4caf7cb2e1fdea729ac2a70e81f144c5c79"
 dependencies = [
  "oxc_allocator",
  "oxc_codegen",
