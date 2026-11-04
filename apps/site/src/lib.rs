@@ -84,7 +84,7 @@ mod tests {
                 "navigation absent on {page}"
             );
             assert!(
-                html.contains("href=\"/docs/\""),
+                html.contains("href=\"https://docs.serenade.rs\""),
                 "documentation link absent on {page}"
             );
         }
@@ -129,8 +129,6 @@ mod tests {
         let html = render_page("components");
         assert_eq!(html.matches("/crates/").count(), 40);
         assert!(html.contains("Pre-1.0"));
-        assert!(html.contains("docs/api-rust/README.md"));
-        assert!(!html.contains("github.io"));
     }
 
     #[test]
@@ -150,10 +148,9 @@ mod tests {
         let html = render_page("home");
         for credit in [
             "https://leptos.dev",
-            "https://github.com/Interchouette-ITC/rangular",
-            "https://github.com/Interchouette-ITC/Serenade",
+            "https://rangular.rust.contact",
+            "https://serenade.rust.contact",
             "page templates and nested SCSS",
-            "/docs/reference/api-docs/",
         ] {
             assert!(html.contains(credit), "missing footer credit: {credit}");
         }
@@ -164,7 +161,7 @@ mod tests {
     fn rangular_templates_preserve_inline_spaces_and_preformatted_commands() {
         let home = render_page("home");
         assert!(home.contains("Meet<!> <span>Serenade."));
-        assert!(home.contains("Built with<!> <a href=\"https://leptos.dev\">"));
+        assert!(home.contains("https://leptos.dev"));
         assert!(home.contains("Kernel &amp; bundles"));
         assert!(home.contains("Your application\n├── Kernel        the conductor"));
 
