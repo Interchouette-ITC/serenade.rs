@@ -29,6 +29,30 @@
     }
   }
 
+  .myfeed {
+    background: #fff;
+    border-color: #6b3fa0;
+    &:hover {
+      background: #f5f0fa;
+    }
+    > a {
+      color: #6b3fa0;
+    }
+  }
+
+  .button {
+    &--myfeed {
+      background: #fff;
+      color: #6b3fa0;
+      border-color: #fff;
+
+      &:hover {
+        background: #f5f0fa;
+        color: #6b3fa0;
+      }
+    }
+  }
+
   @media (max-width: 760px) {
     .feature-section {
       .feature-grid {
