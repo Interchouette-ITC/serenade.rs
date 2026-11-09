@@ -6,6 +6,10 @@ The shared header, footer, and pages each use the rangular `.html` + `.scss` +
 `.rs` component pattern. The build compiles their templates to Leptos views and
 their nested SCSS to browser CSS.
 
+The SEO head uses the same Rangular template pattern, with interpolated page
+metadata and ordinary Open Graph attributes. Its Rust module is SSR-only;
+browser hydration mounts the page body without compiling the SEO component.
+
 ## Requirements
 
 - Rust toolchain compatible with the Serenade workspace

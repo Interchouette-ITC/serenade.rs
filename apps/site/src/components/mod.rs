@@ -4,6 +4,8 @@ pub mod architecture;
 pub mod components;
 pub mod getting_started;
 pub mod home;
+#[cfg(feature = "ssr")]
+pub mod seo_head;
 pub mod site_footer;
 pub mod site_header;
 pub mod site_layout;

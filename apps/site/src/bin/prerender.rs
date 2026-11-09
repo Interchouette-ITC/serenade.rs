@@ -16,21 +16,15 @@ fn main() -> anyhow::Result<()> {
         ("architecture", "architecture"),
         ("components", "components"),
     ] {
-        let mut html = shell.clone();
-        let content_marker = "<!--SERENADE_SSG_CONTENT-->";
-        if html.matches(content_marker).count() != 1 {
-            bail!("Trunk output must contain exactly one {content_marker} marker");
-        }
-        html = html.replacen(content_marker, &serenade_site::render_page(page), 1);
         let (title, description) = page_metadata(page);
-        html = html.replace(
-            "<title>Serenade - Rust application framework</title>",
-            &format!("<title>{title}</title>"),
-        );
-        html = html.replace(
-            "content=\"Meet Serenade: a Rust application framework for building maintainable software from clear, reusable components.\"",
-            &format!("content=\"{description}\""),
-        );
+        let canonical = if route.is_empty() {
+            "https://serenade.rs/".to_owned()
+        } else {
+            format!("https://serenade.rs/{route}/")
+        };
+        let head = serenade_site::render_seo_head(title, description, &canonical);
+        let content = serenade_site::render_page(page);
+        let html = render_shell(&shell, &head, &content)?;
 
         let output = if route.is_empty() {
             dist.join("index.html")
@@ -46,6 +40,22 @@ fn main() -> anyhow::Result<()> {
     }
 
     Ok(())
+}
+
+fn render_shell(shell: &str, head: &str, content: &str) -> anyhow::Result<String> {
+    let head_marker = "<!--SERENADE_SSG_HEAD-->";
+    let content_marker = "<!--SERENADE_SSG_CONTENT-->";
+    if shell.matches(head_marker).count() != 1 || shell.matches(content_marker).count() != 1 {
+        bail!("Trunk output must contain exactly one head and content marker");
+    }
+    let (before_head, after_head) = shell
+        .split_once(head_marker)
+        .context("Trunk output is missing the SEO head marker")?;
+    let shell = format!("{before_head}{head}{after_head}");
+    let (before_content, after_content) = shell
+        .split_once(content_marker)
+        .context("Trunk output is missing the page content marker")?;
+    Ok(format!("{before_content}{content}{after_content}"))
 }
 
 fn page_metadata(page: &str) -> (&'static str, &'static str) {

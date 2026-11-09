@@ -960,9 +960,9 @@ dependencies = [
 
 [[package]]
 name = "itoa"
-version = "1.0.18"
+version = "1.0.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682"
+checksum = "3bd1574e617a9a6c1f8f8181bd7e841e1f20e4277607ef28945765188d6284d4"
 
 [[package]]
 name = "js-sys"
@@ -1888,7 +1888,7 @@ dependencies = [
 [[package]]
 name = "rangular-aot"
 version = "1.0.3"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#793591a57fc522a96028f29531892180c7a74572"
+source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#c14fb5c93a5152550bc33e79913595013ca849db"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1901,7 +1901,7 @@ dependencies = [
 [[package]]
 name = "rangular-build"
 version = "1.0.3"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#793591a57fc522a96028f29531892180c7a74572"
+source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#c14fb5c93a5152550bc33e79913595013ca849db"
 dependencies = [
  "rangular-aot",
  "rangular-css",
@@ -1910,7 +1910,7 @@ dependencies = [
 [[package]]
 name = "rangular-css"
 version = "1.0.3"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#793591a57fc522a96028f29531892180c7a74572"
+source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#c14fb5c93a5152550bc33e79913595013ca849db"
 dependencies = [
  "grass",
 ]
@@ -1918,7 +1918,7 @@ dependencies = [
 [[package]]
 name = "rangular-expr"
 version = "1.0.3"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#793591a57fc522a96028f29531892180c7a74572"
+source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#c14fb5c93a5152550bc33e79913595013ca849db"
 dependencies = [
  "rangular-host",
 ]
@@ -1926,7 +1926,7 @@ dependencies = [
 [[package]]
 name = "rangular-host"
 version = "1.0.3"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#793591a57fc522a96028f29531892180c7a74572"
+source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#c14fb5c93a5152550bc33e79913595013ca849db"
 dependencies = [
  "regex",
 ]
@@ -1934,7 +1934,7 @@ dependencies = [
 [[package]]
 name = "rangular-parser"
 version = "1.0.3"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#793591a57fc522a96028f29531892180c7a74572"
+source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#c14fb5c93a5152550bc33e79913595013ca849db"
 dependencies = [
  "rangular-expr",
 ]
@@ -2607,9 +2607,9 @@ checksum = "3a3b425286980a367278453f3b6d28cdcb134b574e5a35824a6ff5eebad50bb6"
 
 [[package]]
 name = "uuid"
-version = "1.29.1"
+version = "1.29.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4a06f08a856b009bc7bbaf7d3e79808595d032dd19074c0c2ef26e49e03e6bdc"
+checksum = "bed99139f7dac9b5cfe5f17be4d66dc7079a34dee1d74bcc77217119240e267c"
 dependencies = [
  "getrandom 0.4.3",
  "js-sys",

@@ -56,9 +56,56 @@ pub fn render_page(page: &'static str) -> String {
     owner.with(|| view! { <SitePage page /> }.to_html())
 }
 
+#[cfg(feature = "ssr")]
+pub fn render_seo_head(title: &str, description: &str, canonical: &str) -> String {
+    let owner = Owner::new_root(Some(std::sync::Arc::new(
+        hydration_context::SsrSharedContext::new(),
+    )));
+    owner.with(|| {
+        view! {
+            <components::seo_head::SeoHead
+                title=title.to_owned()
+                description=description.to_owned()
+                canonical=canonical.to_owned()
+            />
+        }
+        .to_html()
+    })
+}
+
 #[cfg(all(test, feature = "ssr"))]
 mod tests {
-    use super::{page_for_path, render_page};
+    use super::{page_for_path, render_page, render_seo_head};
+
+    #[test]
+    fn seo_head_renders_template_attributes_and_escapes_values() {
+        let html = render_seo_head(
+            "Serenade & \"Rust\" <framework>",
+            "Components & \"bundles\"",
+            "https://serenade.rs/components/",
+        );
+        for expected in [
+            "<title>Serenade &amp; \"Rust\" &lt;framework&gt;</title>",
+            "property=\"og:title\"",
+            "property=\"og:description\"",
+            "property=\"og:url\"",
+            "content=\"Serenade &amp; &quot;Rust&quot; &lt;framework&gt;\"",
+            "content=\"Components &amp; &quot;bundles&quot;\"",
+            "href=\"https://serenade.rs/components/\"",
+            "content=\"https://serenade.rs/components/\"",
+            "content=\"https://serenade.rs/serenade.rs.png\"",
+            "name=\"twitter:card\" content=\"summary_large_image\"",
+            "type=\"application/ld+json\"",
+            "\"@context\":\"https://schema.org\"",
+        ] {
+            assert!(
+                html.contains(expected),
+                "missing SEO output: {expected}\n{html}"
+            );
+        }
+        assert_eq!(html.matches("<title>").count(), 1);
+        assert!(!html.contains("{{"));
+    }
 
     #[test]
     fn routes_resolve_to_the_expected_pages() {
