@@ -1,22 +1,22 @@
 
-.PHONY: build site prerender astro test preview clean
+.PHONY: build ssg tools astro test preview clean
 
 DOCS_DIR ?= ../serenade/docs/astro
+SERENADE_REPOSITORY ?= https://github.com/Interchouette-ITC/serenade.git
+SERENADE_SSG ?= serenade-ssg
 
 # Main website: Leptos/WASM + SSR prerendering.
 # Does NOT compile or copy Astro documentation.
-build: site
-	$(MAKE) prerender
+build: ssg
 
-# Build the Leptos frontend with Trunk.
-site:
-	cd apps/site && trunk build --release --locked --features hydrate
+# Build the hydration bundle with Serenade's pinned Trunk, then prerender every
+# route into complete documents carrying Trunk's generated assets.
+ssg:
+	$(SERENADE_SSG) --release --app-dir apps/site
 
-# Generate prerendered pages using the SSR binary.
-prerender:
-	cargo run --locked --release \
-		--manifest-path apps/site/Cargo.toml \
-		--no-default-features --features ssr --bin prerender
+# Install the Serenade SSG command.
+tools:
+	cargo install --locked --git $(SERENADE_REPOSITORY) --branch dev serenade-cli --bin serenade-ssg
 
 # Build Astro documentation and copy it into the website distribution.
 astro:

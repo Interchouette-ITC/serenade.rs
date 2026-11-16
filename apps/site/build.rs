@@ -1,6 +1,8 @@
 fn main() {
     rangular_build::build(
         rangular_build::Config::new("src/components", "style/rangular.generated.css")
-            .global_scss("style/serenade.scss"),
+            .global_scss("style/serenade.scss")
+            .document("src/document/document.html")
+            .head("src/document/head.html"),
     );
 }
