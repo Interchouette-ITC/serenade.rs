@@ -16,7 +16,8 @@ const COPIED_ICON: &str =
     r#"<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>"#;
 const RESET_AFTER: Duration = Duration::from_millis(1600);
 
-/// Wraps every `<pre>` in `<main>` with a copy-to-clipboard button.
+/// Wraps every command excerpt (`pre.code-block`) in `<main>` with a
+/// copy-to-clipboard button. Illustrations such as the home page tree are left alone.
 pub fn add_copy_buttons() {
     let Some(window) = web_sys::window() else {
         return;
@@ -28,7 +29,7 @@ pub fn add_copy_buttons() {
     let Some(document) = window.document() else {
         return;
     };
-    let Ok(blocks) = document.query_selector_all("main pre") else {
+    let Ok(blocks) = document.query_selector_all("main pre.code-block") else {
         return;
     };
     for index in 0..blocks.length() {
