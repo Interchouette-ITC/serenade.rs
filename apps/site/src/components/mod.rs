@@ -1,11 +1,10 @@
 use rangular_host::{Host, HostError, Value};
 
 pub mod architecture;
-pub mod components;
+#[path = "components.rs"]
+pub mod components_page;
 pub mod getting_started;
 pub mod home;
-#[cfg(feature = "ssr")]
-pub mod seo_head;
 pub mod site_footer;
 pub mod site_header;
 pub mod site_layout;
@@ -20,7 +19,7 @@ impl Host for StaticHost {
                 "Your application\n├── Kernel        the conductor\n├── Bundles       your arrangements\n├── Components    instruments, ready to play\n└── Adapters      your choice of venue"
             }
             "setupCommands" => {
-                "git clone https://github.com/Interchouette-ITC/Serenade.git\ncd Serenade\nrustup target add wasm32-unknown-unknown\ncargo install trunk"
+                "git clone https://github.com/Interchouette-ITC/Serenade.git\ncd Serenade\nrustup target add wasm32-unknown-unknown\ncargo install --git https://github.com/Interchouette-ITC/trunk.git --tag v0.22.1-itc.5 trunk"
             }
             "coreCommands" => "make test\nmake demo",
             "spaCommands" => {

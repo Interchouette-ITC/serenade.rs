@@ -9,7 +9,7 @@ build = "build.rs"
 [features]
 default = ["hydrate"]
 hydrate = ["leptos/hydrate", "dep:web-sys"]
-ssr = ["leptos/ssr", "dep:hydration_context", "dep:serenade-minify"]
+ssr = ["leptos/ssr", "dep:serenade-view"]
 
 [[bin]]
 name = "serenade-site"
@@ -30,8 +30,7 @@ web-sys = { version = "0.3", optional = true, features = [
   "Window",
   "Location",
 ] }
-hydration_context = { version = "0.3.2", optional = true, default-features = false }
-serenade-minify = { git = "https://github.com/Interchouette-ITC/serenade.git", branch = "dev", optional = true }
+serenade-view = { git = "https://github.com/Interchouette-ITC/serenade.git", branch = "dev", optional = true, features = ["leptos-ssr"] }
 anyhow = "1"
 
 [build-dependencies]

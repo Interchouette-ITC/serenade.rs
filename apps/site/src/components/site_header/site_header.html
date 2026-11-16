@@ -1,9 +1,15 @@
 <header class="site-header">
   <a class="brand" href="/" aria-label="Serenade home">
-    <img
-      src="/serenade-header-logo.png"
-      alt="Serenade, Rust application framework"
-    />
+    <picture>
+      <source
+        media="(max-width: 1240px)"
+        srcset="/serenade-header-logo-round.png"
+      />
+      <img
+        src="/serenade-header-logo.png"
+        alt="Serenade, Rust application framework"
+      />
+    </picture>
   </a>
   <nav class="site-nav" aria-label="Main navigation">
     <a href="/getting-started/">Get started</a>
