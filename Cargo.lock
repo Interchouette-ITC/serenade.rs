@@ -1796,6 +1796,8 @@ dependencies = [
  "rangular-expr",
  "rangular-host",
  "serenade-view",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
  "web-sys",
 ]
 

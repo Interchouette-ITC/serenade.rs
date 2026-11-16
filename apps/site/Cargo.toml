@@ -8,7 +8,7 @@ build = "build.rs"
 
 [features]
 default = ["hydrate"]
-hydrate = ["leptos/hydrate", "dep:web-sys"]
+hydrate = ["leptos/hydrate", "dep:web-sys", "dep:wasm-bindgen", "dep:wasm-bindgen-futures"]
 ssr = ["leptos/ssr", "dep:serenade-view"]
 
 [[bin]]
@@ -29,7 +29,17 @@ rangular-host = { workspace = true }
 web-sys = { version = "0.3", optional = true, features = [
   "Window",
   "Location",
+  "Document",
+  "Element",
+  "DomTokenList",
+  "Node",
+  "NodeList",
+  "Navigator",
+  "Clipboard",
+  "EventTarget",
 ] }
+wasm-bindgen = { version = "0.2", optional = true }
+wasm-bindgen-futures = { version = "0.4", optional = true }
 serenade-view = { git = "https://github.com/Interchouette-ITC/serenade.git", branch = "dev", optional = true, features = ["leptos-ssr"] }
 anyhow = "1"
 

@@ -1,6 +1,8 @@
 use leptos::prelude::*;
 
 mod components;
+#[cfg(feature = "hydrate")]
+pub mod copy_code;
 #[cfg(feature = "ssr")]
 mod document;
 
