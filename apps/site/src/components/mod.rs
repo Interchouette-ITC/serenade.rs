@@ -19,7 +19,7 @@ impl Host for StaticHost {
                 "Your application\n├── Kernel        the conductor\n├── Bundles       your arrangements\n├── Components    instruments, ready to play\n└── Adapters      your choice of venue"
             }
             "setupCommands" => {
-                "git clone https://github.com/Interchouette-ITC/Serenade.git\ncd Serenade\nrustup target add wasm32-unknown-unknown\ncargo install --git https://github.com/Interchouette-ITC/trunk.git --tag v0.22.1-itc.5 trunk"
+                "git clone https://github.com/Interchouette-ITC/Serenade.git\ncd Serenade\nrustup target add wasm32-unknown-unknown\ncargo install --path crates/serenade-cli"
             }
             "coreCommands" => "make test\nmake demo",
             "spaCommands" => {

@@ -8,8 +8,10 @@
   </p>
   <h2>1. Install the prerequisites</h2>
   <p>
-    Install Rust 1.99.0 or newer, GNU Make, Trunk, and the WebAssembly target.
-    The first Cargo build downloads dependencies.
+    Install Rust 1.99.0 or newer, GNU Make, and the WebAssembly target, then
+    the Serenade CLI. You do not need to install Trunk: the first SPA, SSG, or
+    Universal build downloads Serenade's managed Trunk, a prebuilt and
+    checksum-verified binary.
   </p>
   <pre class="code-block"><code>{{ setupCommands }}</code></pre>
   <h2>2. Run the tests and core demo</h2>
@@ -48,7 +50,10 @@
     <article class="quickstart-mode">
       <span class="quickstart-mode__label">BUILD · SPA</span>
       <h3>A client-rendered app</h3>
-      <p>Build the Leptos SPA and its interactive counter with Trunk.</p>
+      <p>
+        Build the Leptos SPA and its interactive counter with Serenade's managed
+        Trunk.
+      </p>
       <pre class="code-block"><code>{{ spaCommands }}</code></pre>
       <p>
         Open http://127.0.0.1:4173/. The build output is

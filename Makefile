@@ -9,7 +9,7 @@ SERENADE_SSG ?= serenade-ssg
 # Does NOT compile or copy Astro documentation.
 build: ssg
 
-# Build the hydration bundle with Serenade's pinned Trunk, then prerender every
+# Build the hydration bundle with Serenade's managed Trunk, then prerender every
 # route into complete documents carrying Trunk's generated assets.
 ssg:
 	$(SERENADE_SSG) --release --app-dir apps/site
