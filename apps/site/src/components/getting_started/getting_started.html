@@ -2,21 +2,23 @@
   <p class="eyebrow">DOCUMENTATION · FIRST STEPS</p>
   <h1>Get to know{{ space }}<span>Serenade.</span></h1>
   <p class="doc-page__lead">
-    Serenade is pre-1.0. Start with the core bundle demo, then explore four
+    Install Serenade from crates.io, then run the core bundle demo and four
     runnable front-end modes: server-rendered HTML, a client-rendered SPA,
     static-site generation, and a Universal app with a live backend.
   </p>
-  <h2>1. Install the prerequisites</h2>
+  <h2>1. Install Serenade</h2>
   <p>
-    Install Rust 1.99.0 or newer, GNU Make, and the WebAssembly target, then
-    the Serenade CLI. You do not need to install Trunk: the first SPA, SSG, or
-    Universal build downloads Serenade's managed Trunk, a prebuilt and
-    checksum-verified binary.
+    Install Rust 1.100 or newer and the WebAssembly target, then the Serenade
+    CLI and the{{ space }}<code>serenade-framework</code>{{ space }}crate from
+    crates.io, imported as{{ space }}<code>serenade</code>. You do not need to
+    install Trunk: the first SPA, SSG, or Universal build downloads Serenade's
+    managed Trunk, a prebuilt and checksum-verified binary.
   </p>
   <pre class="code-block"><code>{{ setupCommands }}</code></pre>
-  <h2>2. Run the tests and core demo</h2>
+  <h2>2. Run the examples from source</h2>
   <p>
-    Run the workspace tests, then start the small bundle sample. The demo prints
+    The examples live in the Serenade repository and need GNU Make. Clone it,
+    run the workspace tests, then start the small bundle sample. The demo prints
     registered bundles, a greeting, event subscribers, and routes, then exits.
   </p>
   <pre class="code-block"><code>{{ coreCommands }}</code></pre>
@@ -127,16 +129,16 @@
     ORM.
   </p>
   <div class="doc-callout">
-    <strong>Pre-1.0 project</strong>
+    <strong>Serenade 1.0 on crates.io</strong>
     <p>
-      Crates evolve independently and APIs can change. Check each crate's
-      README, tests, and current API documentation before adopting it.
+      All crates share one version. Maturity varies by crate: check each
+      crate's README, tests, and API documentation before adopting it.
     </p>
   </div>
   <div class="doc-actions">
     <a
       class="button button--primary"
-      href="https://interchouette-itc.github.io/Serenade/"
+      href="https://docs.rs/serenade-framework"
       >Rust API docs</a
     >
     <a

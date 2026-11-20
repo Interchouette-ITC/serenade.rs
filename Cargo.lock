@@ -1734,8 +1734,9 @@ dependencies = [
 
 [[package]]
 name = "serenade-form"
-version = "0.1.0"
-source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#cc477873136eac83234334cf3ee28d13fb381d63"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6b7dfcda9c6e895825fbc8bf8cec483ad196e7bde88b045dc5a1e161b08d26cc"
 dependencies = [
  "serenade-http",
  "serenade-security",
@@ -1746,24 +1747,27 @@ dependencies = [
 
 [[package]]
 name = "serenade-http"
-version = "0.1.0"
-source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#cc477873136eac83234334cf3ee28d13fb381d63"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b2890dc431ebd35f1a40f30d4c7bfa0780609ffd7bc7080f182a6c3f4ca9b4ae"
 dependencies = [
  "thiserror 2.0.21",
 ]
 
 [[package]]
 name = "serenade-messenger"
-version = "0.1.0"
-source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#cc477873136eac83234334cf3ee28d13fb381d63"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a07bac818ce4dca5acf468de68601cf6cbf7f0fd4275c550015cbcf5ed9fc38b"
 dependencies = [
  "thiserror 2.0.21",
 ]
 
 [[package]]
 name = "serenade-security"
-version = "0.1.0"
-source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#cc477873136eac83234334cf3ee28d13fb381d63"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1cb86c988268e487d5be1e8f2fd0e0093c95ab162b3cccd8891f9bd3d9c48f52"
 dependencies = [
  "argon2",
  "getrandom 0.4.3",
@@ -1777,8 +1781,9 @@ dependencies = [
 
 [[package]]
 name = "serenade-session"
-version = "0.1.0"
-source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#cc477873136eac83234334cf3ee28d13fb381d63"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "986924d56d0b95fc64c5f1060efadc0cdd91bee3844d12aff3df5e5bf8b8c469"
 dependencies = [
  "getrandom 0.4.3",
  "serenade-http",
@@ -1803,8 +1808,9 @@ dependencies = [
 
 [[package]]
 name = "serenade-validator"
-version = "0.1.0"
-source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#cc477873136eac83234334cf3ee28d13fb381d63"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6e8ef2d71e1467a34377f29a142675066ccdc3291f32679944f1acb3deb797e1"
 dependencies = [
  "serenade-messenger",
  "thiserror 2.0.21",
@@ -1812,8 +1818,9 @@ dependencies = [
 
 [[package]]
 name = "serenade-view"
-version = "0.1.0"
-source = "git+https://github.com/Interchouette-ITC/serenade.git?branch=dev#cc477873136eac83234334cf3ee28d13fb381d63"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ecf0e0094e39a1887099942f069fad70a847b05f46f92ddec3a52ed847a0375e"
 dependencies = [
  "any_spawner",
  "base64 0.23.1",

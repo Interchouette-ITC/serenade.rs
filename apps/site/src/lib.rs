@@ -254,8 +254,8 @@ mod tests {
     #[test]
     fn component_catalog_lists_all_crates_and_api_docs_guide() {
         let html = render_page("components");
-        assert_eq!(html.matches("/crates/").count(), 40);
-        assert!(html.contains("Pre-1.0"));
+        assert_eq!(html.matches("https://crates.io/crates/serenade-").count(), 42);
+        assert!(html.contains("https://docs.rs/serenade-framework"));
     }
 
     #[test]
@@ -268,6 +268,8 @@ mod tests {
         assert!(html.contains("demo-ssg/dist"));
         assert!(html.contains("/cms/hello"));
         assert!(html.contains("127.0.0.1:8080"));
+        assert!(html.contains("cargo add serenade-framework --rename serenade"));
+        assert!(html.contains("git clone https://github.com/Interchouette-ITC/Serenade.git"));
     }
 
     #[test]

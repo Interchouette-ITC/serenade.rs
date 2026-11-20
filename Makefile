@@ -2,7 +2,6 @@
 .PHONY: build ssg tools astro test preview clean
 
 DOCS_DIR ?= ../serenade/docs/astro
-SERENADE_REPOSITORY ?= https://github.com/Interchouette-ITC/serenade.git
 SERENADE_SSG ?= serenade-ssg
 
 # Main website: Leptos/WASM + SSR prerendering.
@@ -14,9 +13,9 @@ build: ssg
 ssg:
 	$(SERENADE_SSG) --release --app-dir apps/site
 
-# Install the Serenade SSG command.
+# Install the Serenade SSG command from crates.io.
 tools:
-	cargo install --locked --git $(SERENADE_REPOSITORY) --branch dev serenade-cli --bin serenade-ssg
+	cargo install --locked serenade-cli --bin serenade-ssg
 
 # Build Astro documentation and copy it into the website distribution.
 astro:

@@ -19,9 +19,11 @@ impl Host for StaticHost {
                 "Your application\n├── Kernel        the conductor\n├── Bundles       your arrangements\n├── Components    instruments, ready to play\n└── Adapters      your choice of venue"
             }
             "setupCommands" => {
-                "git clone https://github.com/Interchouette-ITC/Serenade.git\ncd Serenade\nrustup target add wasm32-unknown-unknown\ncargo install --path crates/serenade-cli"
+                "rustup target add wasm32-unknown-unknown\ncargo install serenade-cli --locked\ncargo new my-app && cd my-app\ncargo add serenade-framework --rename serenade"
             }
-            "coreCommands" => "make test\nmake demo",
+            "coreCommands" => {
+                "git clone https://github.com/Interchouette-ITC/Serenade.git\ncd Serenade\nmake test\nmake demo"
+            }
             "spaCommands" => {
                 "make spa\npython3 -m http.server 4173 --bind 127.0.0.1 --directory examples/demo-monorepo/apps/demo-spa/dist"
             }

@@ -30,7 +30,7 @@ fn page_metadata(route: &str, page: &str) -> PageMeta {
     let (title, description) = match page {
         "getting-started" => (
             "Getting started with Serenade",
-            "Start exploring the pre-1.0 Serenade Rust framework from its source and examples.",
+            "Install the Serenade CLI and explore the Serenade Rust framework from its examples.",
         ),
         "architecture" => (
             "Serenade architecture",
