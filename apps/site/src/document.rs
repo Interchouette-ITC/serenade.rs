@@ -1,6 +1,6 @@
 use leptos::prelude::*;
-use rangular_aot::HostCell;
-use rangular_host::{Host, HostError, Value};
+use rangular::aot::HostCell;
+use rangular::host::{Host, HostError, Value};
 use serenade_view::{Document, DocumentAssets, DocumentSlot, RenderedDocument, ViewError};
 
 use crate::{SitePage, components::StaticHost};

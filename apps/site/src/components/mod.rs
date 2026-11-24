@@ -1,4 +1,4 @@
-use rangular_host::{Host, HostError, Value};
+use rangular::host::{Host, HostError, Value};
 
 pub mod architecture;
 #[path = "components.rs"]

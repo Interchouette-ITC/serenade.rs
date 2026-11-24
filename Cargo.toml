@@ -9,6 +9,4 @@ publish = false
 
 [workspace.dependencies]
 leptos = { version = "0.8", default-features = false }
-rangular-aot = { git = "https://github.com/Interchouette-ITC/rangular.git", branch = "dev" }
-rangular-expr = { git = "https://github.com/Interchouette-ITC/rangular.git", branch = "dev" }
-rangular-host = { git = "https://github.com/Interchouette-ITC/rangular.git", branch = "dev" }
+rangular = "1.1"

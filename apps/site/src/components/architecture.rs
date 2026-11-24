@@ -1,5 +1,5 @@
 use leptos::prelude::*;
-use rangular_aot::HostCell;
+use rangular::aot::HostCell;
 
 use super::StaticHost;
 

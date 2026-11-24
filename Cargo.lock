@@ -1461,9 +1461,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "rangular"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0bd5324fbfbb4fa022564b610f9645535eea795ef296a15f7de6fe3b03e98437"
+dependencies = [
+ "rangular-aot",
+ "rangular-css",
+ "rangular-expr",
+ "rangular-host",
+ "rangular-macros",
+ "rangular-parser",
+ "rangular-runtime",
+]
+
+[[package]]
 name = "rangular-aot"
-version = "1.0.5"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#dd24f897b9482fe032c13f6f8b88f477f21ee8c3"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "622c144e0a011d515a8c1c47a107e059a12632243583f96e4eb49c493d63d230"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1476,8 +1492,9 @@ dependencies = [
 
 [[package]]
 name = "rangular-build"
-version = "1.0.5"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#dd24f897b9482fe032c13f6f8b88f477f21ee8c3"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "865e404681a8d79ccb76fbf62b01d18f0f39b59d23e8be7b2c1181a8b2107a96"
 dependencies = [
  "rangular-aot",
  "rangular-css",
@@ -1485,34 +1502,60 @@ dependencies = [
 
 [[package]]
 name = "rangular-css"
-version = "1.0.5"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#dd24f897b9482fe032c13f6f8b88f477f21ee8c3"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a1c179d624632b0eb55dd67e395e8baf0241f755cf32bfda7c23653997efb5e6"
 dependencies = [
  "grass",
 ]
 
 [[package]]
 name = "rangular-expr"
-version = "1.0.5"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#dd24f897b9482fe032c13f6f8b88f477f21ee8c3"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f06dea48731ddcbf8c3bdb3ee9309e85b0f76100dae77ae4f16d0f5e910ccfe9"
 dependencies = [
  "rangular-host",
 ]
 
 [[package]]
 name = "rangular-host"
-version = "1.0.5"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#dd24f897b9482fe032c13f6f8b88f477f21ee8c3"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dca8569f5e43d10d7ccbb10214eba9474239f46126cecf80213527b795a1bc36"
 dependencies = [
  "regex",
 ]
 
 [[package]]
+name = "rangular-macros"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fea05f26e63c7d44cc4f82481e6fffaa84a3048533b392f8b3f6969218182509"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 3.0.10",
+]
+
+[[package]]
 name = "rangular-parser"
-version = "1.0.5"
-source = "git+https://github.com/Interchouette-ITC/rangular.git?branch=dev#dd24f897b9482fe032c13f6f8b88f477f21ee8c3"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1daab471f926d9cf57be0e3a1a32a22a3efa4c61e1b538756b0f91aa4fefcd05"
 dependencies = [
  "rangular-expr",
+]
+
+[[package]]
+name = "rangular-runtime"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9a07ffa243191936fd3425b9d066a02c73022df4418466c39889e911c580e489"
+dependencies = [
+ "rangular-expr",
+ "rangular-host",
+ "rangular-parser",
 ]
 
 [[package]]
@@ -1796,10 +1839,8 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "leptos",
- "rangular-aot",
+ "rangular",
  "rangular-build",
- "rangular-expr",
- "rangular-host",
  "serenade-view",
  "wasm-bindgen",
  "wasm-bindgen-futures",
