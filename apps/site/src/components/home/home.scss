@@ -1,5 +1,17 @@
 .home-page {
   .hero {
+    .hero__notes {
+      gap: 0.3rem;
+    }
+
+    .hero__panels {
+      display: grid;
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      align-items: stretch;
+      gap: 1.25rem;
+    }
+
     .hero__art {
       .hero__cat {
         display: block;
@@ -14,10 +26,33 @@
     }
 
     .hero__terminal {
+      grid-column: auto;
+      width: 100%;
+      margin: 0;
       overflow-x: auto;
 
       pre {
         white-space: pre;
+      }
+    }
+
+    .hero__mcp {
+      padding: 1.5rem;
+      border: 1px solid rgb(242 191 70 / 24%);
+      border-radius: 20px;
+      background: rgb(242 191 70 / 4%);
+
+      h2 {
+        margin: 0.75rem 0;
+        color: var(--paper);
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 1.45rem;
+        font-weight: 500;
+      }
+
+      p:not(.eyebrow) {
+        color: var(--muted);
+        line-height: 1.6;
       }
     }
   }
@@ -40,6 +75,48 @@
     }
   }
 
+  .hero__note-links {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .hero .hero__notes .mcp-link {
+    padding: 0;
+    background: #12110e;
+    white-space: nowrap;
+
+    > a {
+      display: block;
+      padding: 0.48rem 0.72rem;
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    &:hover,
+    &:focus-within {
+      border-color: rgb(242 191 70 / 50%);
+    }
+  }
+
+  .closing__links {
+    display: inline-flex;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .closing__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .closing__mcp {
+    margin-top: 2rem;
+  }
+
   .button {
     &--myfeed {
       background: #fff;
@@ -54,9 +131,22 @@
   }
 
   @media (max-width: 760px) {
+    .hero {
+      .hero__panels {
+        grid-template-columns: minmax(0, 1fr);
+        margin-top: 1.5rem;
+      }
+    }
+
     .feature-section {
       .feature-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero .hero__notes .mcp-link > a {
+        padding: 0.42rem 0.55rem;
       }
     }
   }

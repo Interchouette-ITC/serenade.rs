@@ -38,7 +38,7 @@ hydration bundle with Trunk, then prerenders every route in `ROUTES` to
 available at `http://127.0.0.1:4173/`.
 
 The shared header uses the round logo at widths up to 1240px and places navigation
-on a second row at widths up to 900px. The GitHub button stays visible with the
+on a second row at widths up to 1050px. The GitHub button stays visible with the
 same pill styling at every screen size.
 
 To include the documentation, run

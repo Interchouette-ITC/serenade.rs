@@ -221,6 +221,7 @@ mod tests {
     fn getting_started_explains_the_documentation_mcp() {
         let html = render_page("getting-started");
         for expected in [
+            "id=\"coding-agents-mcp\"",
             "Source-backed help for Serenade and Rangular",
             "serenade-rangular-mcp",
             "--profile",
@@ -228,9 +229,27 @@ mod tests {
             "not an application build or AOT check",
             "requests approval",
             "https://docs.serenade.rs/how-to/agent-mcp/",
+            "https://mcp.serenade.rs/",
         ] {
             assert!(html.contains(expected), "missing {expected}");
         }
+    }
+
+    #[test]
+    fn home_and_header_promote_the_hosted_mcp() {
+        let html = render_page("home");
+        let header = html.split("</header>").next().expect("shared header");
+        let docs = header.find("https://docs.serenade.rs").expect("docs link");
+        let mcp = header.find("https://mcp.serenade.rs/").expect("MCP link");
+        let myfeed = header
+            .find("https://myfeed.serenade.rs")
+            .expect("MyFeed link");
+        assert!(docs < mcp && mcp < myfeed);
+        assert!(
+            header.contains("target=\"_blank\" rel=\"noopener\" href=\"https://mcp.serenade.rs/\"")
+        );
+        assert!(html.contains("href=\"/getting-started/#coding-agents-mcp\""));
+        assert!(html.matches("href=\"https://mcp.serenade.rs/\"").count() >= 3);
     }
 
     #[test]
