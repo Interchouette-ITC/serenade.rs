@@ -218,6 +218,22 @@ mod tests {
     }
 
     #[test]
+    fn getting_started_explains_the_documentation_mcp() {
+        let html = render_page("getting-started");
+        for expected in [
+            "Source-backed help for Serenade and Rangular",
+            "serenade-rangular-mcp",
+            "--profile",
+            "embedded source version and revision",
+            "not an application build or AOT check",
+            "requests approval",
+            "https://docs.serenade.rs/how-to/agent-mcp/",
+        ] {
+            assert!(html.contains(expected), "missing {expected}");
+        }
+    }
+
+    #[test]
     fn architecture_explains_symfony_inspiration_without_claiming_compatibility() {
         let html = render_page("architecture");
         for detail in [

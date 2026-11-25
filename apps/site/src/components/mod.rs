@@ -30,6 +30,9 @@ impl Host for StaticHost {
             "ssgCommands" => {
                 "make ssg\npython3 -m http.server 4173 --bind 127.0.0.1 --directory examples/demo-monorepo/apps/demo-ssg/dist"
             }
+            "mcpConfig" => {
+                "{\n  \"servers\": {\n    \"serenade-rangular\": {\n      \"type\": \"stdio\",\n      \"command\": \"serenade-rangular-mcp\",\n      \"args\": [\"--profile\", \"all\"]\n    }\n  }\n}"
+            }
             _ => return None,
         };
         Some(Value::Str(value.to_owned()))

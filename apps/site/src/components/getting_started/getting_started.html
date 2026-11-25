@@ -147,4 +147,35 @@
       >Serenade on GitHub</a
     >
   </div>
+  <h2>Coding agents</h2>
+  <div class="doc-callout">
+    <strong>Source-backed help for Serenade and Rangular</strong>
+    <p>
+      The standalone documentation MCP searches guides and example source,
+      gives app-building workflows, and parses Rangular templates. Each result
+      identifies the embedded source version and revision. The MCP does not
+      fetch this website; its snapshot can differ from the latest docs.
+    </p>
+    <p>
+      Choose the{{ space }}<code>serenade</code>,{{ space }}<code>rangular</code
+      >, or{{ space }}<code>all</code>{{ space }}profile. Template diagnostics
+      use the released parser and are not an application build or AOT check.
+    </p>
+    <p>
+      Install the binary, then configure a stdio client:
+    </p>
+    <pre class="code-block"><code>cargo install --locked serenade-rangular-mcp</code></pre>
+    <pre class="code-block"><code>{{ mcpConfig }}</code></pre>
+    <p>
+      Local stdio tools can scaffold projects and run Cargo, including build
+      scripts and tests; use a client that requests approval. The existing
+      Serenade CLI, managed Trunk and Cargo also run locally. HTTP is available
+      locally as read-only; no public endpoint is advertised.
+    </p>
+  </div>
+  <div class="doc-actions">
+    <a class="button button--quiet" href="https://docs.serenade.rs/how-to/agent-mcp/"
+      >Coding agent setup</a
+    >
+  </div>
 </article>
